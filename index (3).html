@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Abdul Ahad Sultan Ansari — Business Strategy, Market Intelligence, Growth, Innovation, Finance, People and Strategy Projects.">
+<meta name="theme-color" content="#f5f5f7">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Abdul Ahad Sultan Ansari — Strategy · Research · Projects</title>
+<style>
+:root{
+  --bg:#f5f5f7;--paper:#fff;--ink:#111114;--muted:#686970;--soft:#8b8c94;
+  --line:rgba(17,17,20,.10);--blue:#0877e8;--purple:#7358e8;--green:#15966a;
+  --max:1180px;--radius:32px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",
+  "Helvetica Neue",Arial,sans-serif;line-height:1.55;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.02;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+button{font:inherit}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+h1,h2,h3,h4{line-height:1.02;letter-spacing:-.052em}
+p{color:var(--muted)}
+.gradient{
+  background:linear-gradient(105deg,#1c1c21 0%,#4d4f57 38%,var(--blue) 80%,var(--purple) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.14em;color:#777880;
+}
+.eyebrow:before{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);
+  box-shadow:0 0 16px rgba(8,119,232,.55);
+}
+
+/* NAV */
+.nav-shell{position:fixed;z-index:90;top:14px;left:0;right:0;padding:0 14px}
+.nav{
+  width:min(1080px,100%);height:58px;margin:auto;padding:0 10px 0 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-radius:999px;background:rgba(255,255,255,.80);
+  border:1px solid rgba(255,255,255,.95);box-shadow:0 12px 45px rgba(0,0,0,.07);
+  backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);
+}
+.brand{font-weight:800;letter-spacing:-.04em}
+.navlinks{display:flex;align-items:center;gap:2px}
+.navlinks a{font-size:13px;color:#555;padding:9px 12px;border-radius:999px}
+.navlinks a:hover{background:#fff;color:#111}
+.navlinks .navcta{background:#111;color:#fff}
+.menu{display:none;border:0;background:none;font-size:23px}
+
+/* HERO */
+.hero{
+  min-height:100vh;padding:145px 0 92px;display:flex;align-items:center;position:relative;
+  overflow:hidden;border-radius:0 0 48px 48px;
+  background:
+    linear-gradient(90deg,rgba(245,245,247,.99) 0%,rgba(245,245,247,.95) 38%,rgba(245,245,247,.70) 67%,rgba(245,245,247,.23) 100%),
+    url("https://images.unsplash.com/photo-1771153492862-f4737fba886c?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat;
+}
+.hero:after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:160px;
+  background:linear-gradient(transparent,var(--bg));pointer-events:none;
+}
+.hero-grid{
+  width:100%;position:relative;z-index:2;
+  display:grid;grid-template-columns:minmax(0,1.03fr) minmax(420px,.97fr);
+  gap:58px;align-items:center;
+}
+.hero-copy{max-width:790px}
+.hero-kicker{
+  display:flex;align-items:center;gap:10px;font-size:13px;font-weight:750;
+  color:#6d6e75;letter-spacing:.12em;text-transform:uppercase;
+}
+.hero-kicker .pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--blue);
+  box-shadow:0 0 0 0 rgba(8,119,232,.30);
+  animation:pulse 2.6s infinite;
+}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(8,119,232,0)}100%{box-shadow:0 0 0 0 rgba(8,119,232,0)}}
+.hero h1{font-size:clamp(60px,7.5vw,110px);margin:20px 0 26px;max-width:880px}
+.hero-lead{font-size:clamp(18px,1.65vw,23px);line-height:1.46;max-width:750px;color:#4d4e55}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;
+  border:1px solid var(--line);border-radius:999px;background:#fff;color:#111;
+  font-size:14px;font-weight:750;box-shadow:0 8px 24px rgba(0,0,0,.035)
+}
+.btn.dark{background:#111;color:#fff;border-color:#111}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(0,0,0,.10)}
+
+/* WORKING LENS: deliberately uses normal flow */
+.hero-visual{min-width:0}
+.hero-stage{
+  position:relative;width:100%;padding:20px;border-radius:38px;
+  background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.86);
+  box-shadow:0 30px 90px rgba(20,30,50,.10);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+}
+.hero-stage:before,.hero-stage:after{
+  content:"";position:absolute;border-radius:50%;pointer-events:none
+}
+.hero-stage:before{
+  width:350px;height:350px;right:-150px;top:-170px;
+  background:radial-gradient(circle,rgba(8,119,232,.14),transparent 68%);
+}
+.hero-stage:after{
+  width:300px;height:300px;left:-160px;bottom:-170px;
+  background:radial-gradient(circle,rgba(115,88,232,.12),transparent 68%);
+}
+.stage-grid{
+  position:relative;z-index:2;min-height:560px;padding:36px 30px 28px;
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(255,255,255,.66));
+  border:1px solid rgba(255,255,255,.95);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.98),0 18px 55px rgba(0,0,0,.06);
+}
+.stage-label{
+  display:block;margin-bottom:18px;font-size:11px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.16em;color:#7d7f87
+}
+.stage-title{
+  max-width:500px;padding-right:100px;font-size:clamp(38px,4.2vw,58px);
+  line-height:.98;font-weight:560
+}
+.stage-line{height:1px;background:var(--line);margin:30px 0 20px}
+.stage-flow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.flow-card{
+  min-height:105px;padding:17px;border-radius:20px;
+  background:rgba(255,255,255,.80);border:1px solid rgba(255,255,255,.98);
+  box-shadow:0 12px 30px rgba(0,0,0,.05)
+}
+.flow-card b{display:block;font-size:13px}
+.flow-card span{display:block;margin-top:5px;font-size:11px;line-height:1.4;color:#7a7b82}
+.hero-fact{margin-top:22px;padding-top:17px;border-top:1px solid var(--line)}
+.hero-fact strong{font-size:13px}.hero-fact p{margin-top:5px;font-size:12px}
+.hero-image{
+  position:absolute;right:21px;top:21px;z-index:4;width:132px;height:88px;
+  overflow:hidden;border-radius:22px;transform:rotate(2deg);
+  border:1px solid rgba(255,255,255,.95);box-shadow:0 16px 45px rgba(0,0,0,.13);
+}
+.hero-image img{width:100%;height:100%;object-fit:cover}
+.hero-image:after{content:"";position:absolute;inset:0;background:rgba(5,20,40,.11)}
+.float-chip{
+  position:absolute;z-index:5;padding:10px 14px;border-radius:999px;
+  background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.97);
+  box-shadow:0 15px 35px rgba(0,0,0,.09);font-size:11px;font-weight:750;color:#5d5e66;
+}
+.fc1{right:8px;top:126px}.fc2{left:8px;bottom:86px}.fc3{right:30px;bottom:18px}
+.scroll{
+  position:absolute;z-index:4;bottom:23px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:10px;color:#888;font-size:11px
+}
+.scroll i{width:28px;height:1px;background:#bbb;display:block}
+
+/* MARQUEE */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.46)}
+.track{display:flex;width:max-content}
+.track span{padding:18px 28px;white-space:nowrap;font-size:13px;color:#777}
+.track b{color:#111}
+
+/* SECTIONS */
+section{padding:118px 0}
+.section-head{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:45px;margin-bottom:52px
+}
+.section-head h2{font-size:clamp(45px,5.7vw,76px);max-width:790px;margin-top:16px}
+.section-head>p{max-width:450px;font-size:16px}
+.project-intro{max-width:740px;font-size:18px;color:#555;line-height:1.55}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:30px 24px 32px 0;border-right:1px solid var(--line);margin-right:24px}
+.stat:last-child{border-right:0;margin-right:0}
+.stat strong{font-size:46px;letter-spacing:-.06em}.stat span{display:block;color:#777;font-size:12px;margin-top:5px}
+
+/* METHOD */
+.method{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.step{padding:27px 22px 25px 0;border-right:1px solid var(--line);margin-right:22px}
+.step:last-child{border-right:0}
+.num{font-size:11px;color:#999;margin-bottom:55px}.step h3{font-size:22px;margin-bottom:9px}.step p{font-size:13px}
+
+/* PROJECT CARDS */
+.work{display:grid;gap:22px}
+.work-card{
+  min-height:520px;border-radius:var(--radius);overflow:hidden;position:relative;
+  border:1px solid rgba(0,0,0,.07);box-shadow:0 10px 40px rgba(0,0,0,.045)
+}
+.work-card.bluebg{background:linear-gradient(135deg,#fff,#eaf5ff)}
+.work-card.purplebg{background:linear-gradient(135deg,#fff,#f2eeff)}
+.work-card.greenbg{background:linear-gradient(135deg,#fff,#ebfaf3)}
+.work-content{position:relative;z-index:3;max-width:730px;padding:45px}
+.work-card .tag{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#6e7077}
+.work-card h3{font-size:clamp(45px,6vw,76px);margin:44px 0 15px}
+.work-card p{font-size:16px;max-width:680px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.pill{font-size:11px;padding:8px 11px;border:1px solid rgba(0,0,0,.10);background:rgba(255,255,255,.72);border-radius:999px}
+.work-visual{
+  position:absolute;right:0;top:0;bottom:0;width:43%;overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 34%)
+}
+.work-visual img{width:100%;height:100%;object-fit:cover;opacity:.67}
+.work-card .index{
+  position:absolute;right:38px;bottom:10px;font-size:150px;font-weight:900;
+  letter-spacing:-.10em;color:rgba(0,0,0,.045);line-height:1
+}
+.project-note{margin-top:22px;display:flex;align-items:center;gap:12px;color:#777;font-size:12px}
+.project-note i{width:30px;height:1px;background:#aaa}
+
+/* PROJECT DETAIL */
+.story-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:end;margin-bottom:48px}
+.story-head h2{font-size:clamp(45px,5.8vw,76px);margin-top:15px}
+.story-head p{font-size:17px;max-width:560px}
+.project-hero-panel{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.project-photo{
+  height:480px;border-radius:36px;overflow:hidden;position:relative;
+  box-shadow:0 30px 100px rgba(0,0,0,.13)
+}
+.project-photo img{width:100%;height:100%;object-fit:cover}
+.project-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.68))}
+.project-photo-copy{position:absolute;left:28px;right:28px;bottom:26px;z-index:2;color:#fff}
+.project-photo-copy h3{font-size:38px;margin-bottom:8px}
+.project-photo-copy p{font-size:13px;color:#ddd}
+.project-side{
+  border-radius:36px;background:linear-gradient(145deg,#fff,#edf8f1);padding:35px;
+  border:1px solid var(--line);min-height:480px;display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 20px 70px rgba(0,0,0,.06)
+}
+.project-side .big-number{font-size:clamp(55px,6vw,86px);letter-spacing:-.08em;line-height:.9}
+.project-side .label,.learning-card .label,.current-item .label,.research-float span{
+  font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#777
+}
+.project-side p{font-size:15px;color:#555}
+.learning{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.learning-card{
+  padding:34px;border-radius:30px;border:1px solid var(--line);background:rgba(255,255,255,.80);
+  min-height:260px;box-shadow:0 16px 55px rgba(0,0,0,.04)
+}
+.learning-card h3{font-size:31px;margin:26px 0 12px}.learning-card p{font-size:14px}
+.project-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.metric{padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+.metric strong{display:block;font-size:27px;letter-spacing:-.05em}.metric span{font-size:11px;color:#888}
+.funding-banner{display:grid;grid-template-columns:.75fr 1.25fr;gap:20px;margin-top:20px}
+.funding-main{
+  border-radius:30px;background:linear-gradient(135deg,#0b4f31,#123f2d 55%,#0071e3);
+  color:#fff;padding:38px;position:relative;overflow:hidden
+}
+.funding-main .small{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#bfead5}
+.funding-main strong{display:block;font-size:55px;letter-spacing:-.06em;margin:20px 0 5px}
+.funding-main p{color:#cfe4da;font-size:14px}
+.use-funds{border:1px solid var(--line);background:#fff;border-radius:30px;padding:30px}
+.use-funds h3{font-size:24px;margin-bottom:18px}
+.fund-row{display:grid;grid-template-columns:50px 1fr 45px;gap:12px;align-items:center;margin:13px 0;font-size:12px;color:#555}
+.fund-bar{height:7px;border-radius:99px;background:#e9e9ec;overflow:hidden}
+.fund-bar i{display:block;height:100%;background:linear-gradient(90deg,#0d6b43,#43b67e);border-radius:99px}
+.founders{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px}
+.founder{border:1px solid var(--line);border-radius:24px;background:#fff;overflow:hidden}
+.founder-photo{height:145px;background:linear-gradient(135deg,#eaf5ee,#f7f7f7);display:grid;place-items:center;font-size:44px;font-weight:800;color:#17663f}
+.founder-info{padding:16px}.founder-info strong{display:block;font-size:14px}.founder-info span{font-size:11px;color:#888}
+
+/* RESEARCH */
+.current-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.current-main{border-radius:36px;overflow:hidden;position:relative;min-height:520px;background:#111;color:#fff}
+.current-main img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.current-overlay{
+  position:absolute;inset:0;padding:38px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78))
+}
+.current-overlay h3{font-size:clamp(42px,5vw,68px);max-width:720px}
+.current-overlay p{color:#ddd;max-width:650px;font-size:16px}
+.current-list{display:grid;gap:12px}
+.current-item{
+  padding:25px;border-radius:28px;background:rgba(255,255,255,.82);
+  border:1px solid var(--line)
+}
+.current-item h3{font-size:25px;margin:16px 0 8px}.current-item p{font-size:13px}
+.research-float{
+  position:absolute;z-index:5;top:24px;right:24px;padding:14px 17px;border-radius:18px;
+  background:rgba(18,25,34,.50);border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,.16);
+  display:flex;flex-direction:column;gap:4px
+}
+.research-float span{color:rgba(255,255,255,.72)}.research-float b{font-size:12px;color:#fff}
+.photo-ribbon{display:grid;grid-template-columns:1.25fr .9fr .9fr 1.1fr;gap:14px;margin-top:34px}
+.ribbon-photo{height:250px;border-radius:28px;overflow:hidden;position:relative;box-shadow:0 20px 55px rgba(20,30,50,.08);background:#eef2f7}
+.ribbon-photo:nth-child(2){height:210px;margin-top:40px}
+.ribbon-photo:nth-child(3){height:210px;margin-top:10px}
+.ribbon-photo:nth-child(4){height:250px;margin-top:55px}
+.ribbon-photo img{width:100%;height:100%;object-fit:cover}
+.ribbon-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,12,20,.34))}
+.ribbon-label{position:absolute;left:16px;bottom:14px;z-index:2;color:#fff;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:750;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+
+/* Entry motion — content remains visible even when JavaScript is unavailable */
+.reveal{opacity:1;transform:none;animation:riseIn .72s cubic-bezier(.16,1,.3,1) both}
+.delay1{animation-delay:.06s}.delay2{animation-delay:.12s}.delay3{animation-delay:.18s}.delay4{animation-delay:.24s}
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* CAPABILITIES */
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.skill{padding:32px 35px 32px 0;border-bottom:1px solid var(--line)}
+.skill:nth-child(even){padding-left:35px;border-left:1px solid var(--line)}
+.skill h3{font-size:27px;margin-bottom:9px}.skill p{font-size:14px}
+.skillline{margin-top:17px;height:4px;background:#e8e8eb;border-radius:10px;overflow:hidden}
+.skillline i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--blue),var(--purple));transform-origin:left;animation:grow 1.1s cubic-bezier(.16,1,.3,1) both}
+
+/* ABOUT + CONTACT + FOOTER */
+.about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:90px}
+.about-title{font-size:clamp(44px,5.5vw,70px)}
+.about-copy{font-size:19px;line-height:1.55;color:#333}
+.timeline{border-top:1px solid var(--line);margin-top:42px}
+.trow{display:grid;grid-template-columns:145px 1fr;gap:25px;padding:22px 0;border-bottom:1px solid var(--line)}
+.trow time{font-size:11px;color:#999;text-transform:uppercase;letter-spacing:.08em}
+.trow strong{font-size:15px}.trow span{display:block;font-size:13px;color:#777;margin-top:4px}
+.contact-wrap{padding-top:20px}
+.contact{
+  background:#101014;color:#fff;border-radius:42px;padding:85px 70px;position:relative;overflow:hidden
+}
+.contact:before{
+  content:"";position:absolute;width:650px;height:650px;border-radius:50%;right:-280px;top:-330px;
+  background:radial-gradient(circle,rgba(0,113,227,.62),transparent 65%)
+}
+.contact h2{font-size:clamp(50px,7vw,94px);max-width:920px;position:relative;z-index:2}
+.contact p{max-width:620px;color:#a8a8af;font-size:17px;margin:23px 0 31px;position:relative;z-index:2}
+.contact-actions,.contact-info{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+.contact-info{margin-top:35px;gap:18px}
+.contact-info a{font-size:13px;color:#aaa;border-bottom:1px solid #444;padding-bottom:3px}
+footer{padding:45px 0 70px}
+.footer{border-top:1px solid var(--line);padding-top:25px;display:flex;justify-content:space-between;gap:20px}
+.footer span,.footer a{font-size:12px;color:#888}.footer-links{display:flex;gap:20px}
+
+/* MOBILE */
+@media(max-width:980px){
+  .hero{padding-top:125px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:760px}
+  .method{grid-template-columns:1fr 1fr}
+  .project-hero-panel,.current-grid,.funding-banner,.about-grid{grid-template-columns:1fr}
+  .project-side{min-height:360px}
+  .founders{grid-template-columns:repeat(3,1fr)}
+  .project-metrics{grid-template-columns:1fr 1fr}
+  .skill-grid{grid-template-columns:1fr}
+  .skill:nth-child(even){padding-left:0;border-left:0}
+}
+@media(max-width:760px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  .nav-shell{padding:0 9px}.nav{height:54px}
+  .navlinks{
+    display:none;position:absolute;top:63px;left:9px;right:9px;padding:9px;
+    border-radius:22px;background:rgba(255,255,255,.96);box-shadow:0 20px 60px rgba(0,0,0,.13);
+    flex-direction:column;align-items:stretch
+  }
+  .navlinks.open{display:flex}.navlinks a{text-align:center;padding:12px}.menu{display:block}
+  .hero{padding:120px 0 80px;border-radius:0 0 30px 30px}
+  .hero h1{font-size:clamp(52px,14vw,86px)}
+  .hero-lead{font-size:18px}
+  .hero-stage{padding:12px;border-radius:28px}
+  .stage-grid{min-height:auto;padding:30px 22px 24px;border-radius:22px}
+  .stage-title{font-size:38px;padding-right:45px}
+  .stage-flow{grid-template-columns:1fr}
+  .flow-card{min-height:auto}
+  .hero-image{width:100px;height:68px;right:15px;top:15px}
+  .float-chip{display:none}
+  .scroll{display:none}
+  section{padding:88px 0}
+  .section-head,.story-head{display:block;margin-bottom:40px}
+  .section-head>p,.story-head p{margin-top:20px}
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line);margin:0;padding-right:0}
+  .method{grid-template-columns:1fr}
+  .step{border-right:0;margin:0;padding:23px 0}
+  .num{margin-bottom:24px}
+  .work-card{min-height:650px}
+  .work-visual{width:100%;height:48%;bottom:0;top:auto;opacity:.48;mask-image:linear-gradient(180deg,transparent,#000 25%)}
+  .work-content{padding:32px}.work-card h3{margin-top:34px}.work-card .index{font-size:90px;right:25px}
+  .learning,.project-metrics,.founders,.photo-ribbon{grid-template-columns:1fr}
+  .founder{display:grid;grid-template-columns:110px 1fr}.founder-photo{height:100%}
+  .trow{grid-template-columns:90px 1fr;gap:15px}
+  .contact{padding:65px 28px;border-radius:30px}
+  .footer{display:block}.footer-links{margin-top:14px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:54px}.stage-title{font-size:34px}.project-metrics,.founders{grid-template-columns:1fr}
+  .project-photo{height:390px}.current-main{min-height:440px}.current-overlay{padding:25px}
+}
+</style>
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div><div class="ambient a3"></div>
+<div class="cursor" id="cursor"></div>
+
+<header class="nav-shell">
+<nav class="nav">
+  <a class="brand" href="#top">Abdul Ahad Sultan Ansari</a>
+  <button class="menu" id="menu" aria-label="Menu">☰</button>
+  <div class="navlinks" id="navlinks">
+    <a href="#work">Projects</a><a href="#research">Research</a><a href="#capabilities">Capabilities</a><a href="#experience">About</a>
+    <a class="navcta" href="#contact">Let's talk</a>
+  </div>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+  <div class="hero-copy reveal">
+    <div class="hero-kicker"><span class="pulse"></span> Abdul Ahad Sultan Ansari · Strategy & Research</div>
+    <h1>I turn <span class="gradient">business questions</span> into clearer decisions.</h1>
+    <p class="hero-lead">I research markets, diagnose business problems and work on strategy projects across growth, finance, innovation, operations and people — with a focus on understanding the problem before deciding what to build or change.</p>
+    <div class="actions">
+      <a class="btn dark magnetic" href="#work">Explore projects ↗</a>
+      <a class="btn magnetic" href="#research">What I'm researching</a>
+      <a class="btn" href="https://www.linkedin.com/in/abdulahad-ansari" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal delay2">
+    <div class="hero-stage" id="heroStage">
+      <div class="hero-image"><img src="https://images.unsplash.com/photo-1771153492862-f4737fba886c?auto=format&fit=crop&w=1000&q=85" alt="Barcelona cityscape"></div>
+      <div class="stage-grid">
+        <span class="stage-label">My working lens</span>
+        <div class="stage-title">Research first.<br><span class="gradient">Strategy second.</span></div>
+        <div class="stage-line"></div>
+        <div class="stage-flow">
+          <div class="flow-card"><b>01 · Research</b><span>Market · customer · industry</span></div>
+          <div class="flow-card"><b>02 · Diagnose</b><span>Problem · model · capability</span></div>
+          <div class="flow-card"><b>03 · Design</b><span>Options · positioning · roadmap</span></div>
+          <div class="flow-card"><b>04 · Communicate</b><span>Insight · recommendation · action</span></div>
+        </div>
+        <div class="hero-fact"><strong>What I value</strong><p>Clear thinking, commercial reality, useful research and decisions that can actually be acted on.</p></div>
+      </div>
+      <div class="float-chip fc1">Market intelligence</div>
+      <div class="float-chip fc2">Finance · Growth</div>
+      <div class="float-chip fc3">People · Operations</div>
+    </div>
+  </div>
+</div>
+<div class="scroll"><i></i> scroll to explore <i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span><b>Business Strategy</b> · Market Intelligence</span><span><b>Finance</b> · Commercial Thinking</span><span><b>Growth</b> · Business Development</span><span><b>People</b> · HR & Talent</span><span><b>Innovation</b> · Transformation</span><span><b>Strategy Projects</b> · Research</span>
+  <span><b>Business Strategy</b> · Market Intelligence</span><span><b>Finance</b> · Commercial Thinking</span><span><b>Growth</b> · Business Development</span><span><b>People</b> · HR & Talent</span><span><b>Innovation</b> · Transformation</span><span><b>Strategy Projects</b> · Research</span>
+</div></div>
+
+<section>
+<div class="container">
+  <div class="stats">
+    <div class="stat reveal"><strong class="counter" data-target="4">0</strong><span>business lenses I work across</span></div>
+    <div class="stat reveal delay1"><strong class="counter" data-target="3">0</strong><span>featured projects</span></div>
+    <div class="stat reveal delay2"><strong>EU</strong><span>international project perspective</span></div>
+  </div>
+</div>
+</section>
+
+<section id="approach">
+<div class="container">
+  <div class="section-head reveal">
+    <div><div class="eyebrow">How I work</div><h2>Start with the question. End with something useful.</h2></div>
+    <p>I move from research to diagnosis, then turn the evidence into strategic options, business logic and clear communication.</p>
+  </div>
+  <div class="method">
+    <div class="step reveal"><div class="num">01</div><h3>Research</h3><p>Markets, customers, competitors, industries, trends and external forces.</p></div>
+    <div class="step reveal delay1"><div class="num">02</div><h3>Diagnose</h3><p>Business model, value proposition, financial logic, operations and organisational readiness.</p></div>
+    <div class="step reveal delay2"><div class="num">03</div><h3>Design</h3><p>Strategy, positioning, business models, roadmaps and growth options.</p></div>
+    <div class="step reveal delay3"><div class="num">04</div><h3>Challenge</h3><p>Test assumptions, compare alternatives and identify risks before committing resources.</p></div>
+    <div class="step reveal delay4"><div class="num">05</div><h3>Communicate</h3><p>Turn complex work into clear recommendations, reports, presentations and decisions.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="visual-break">
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">The context around the work</div><h2>Markets, people, technology and places shape the questions.</h2></div><p>A visual pause between the method and the projects — using the same image language across healthcare, consumer products, international business and independent research.</p></div>
+  <div class="photo-ribbon">
+    <div class="ribbon-photo reveal"><img src="https://images.unsplash.com/photo-1771153492862-f4737fba886c?auto=format&fit=crop&w=1400&q=85" alt="Barcelona cityscape"><span class="ribbon-label">Barcelona · where I work</span></div>
+    <div class="ribbon-photo reveal delay1"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=85" alt="Healthcare and medication technology"><span class="ribbon-label">Healthcare · Mediloop</span></div>
+    <div class="ribbon-photo reveal delay2"><img src="https://images.unsplash.com/photo-1779896412186-441e30764c8c?auto=format&fit=crop&w=1200&q=85" alt="Friends using smartphones together"><span class="ribbon-label">Consumers · Fantitos</span></div>
+    <div class="ribbon-photo reveal delay3"><img src="https://images.unsplash.com/photo-1758519288726-10e09a4af697?auto=format&fit=crop&w=1400&q=85" alt="International business collaboration"><span class="ribbon-label">International · market work</span></div>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+  <div class="section-head reveal">
+    <div><div class="eyebrow">Projects</div><h2>Real projects. What I did. What I learned.</h2></div>
+    <p class="project-intro">These projects show how I approach different business problems — from healthcare and consumer products to international market development.</p>
+  </div>
+  <div class="work">
+    <a class="work-card bluebg tilt reveal" href="#mediloop">
+      <div class="work-content">
+        <div class="tag">01 · Healthcare · Strategy + Finance</div>
+        <h3>Mediloop</h3>
+        <p>I worked across the business-plan logic: translating the medication-adherence problem into an operating model, mapping the ecosystem, developing the business model, market opportunity, unit economics, financial projections, funding logic, risks and sustainability direction.</p>
+        <div class="pills"><span class="pill">Strategy</span><span class="pill">Market research</span><span class="pill">Business model</span><span class="pill">Financial modelling</span><span class="pill">Operations</span><span class="pill">Sustainability</span></div>
+      </div>
+      <div class="work-visual"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1400&q=85" alt="Healthcare technology and medication"></div>
+      <div class="index">01</div>
+    </a>
+
+    <a class="work-card purplebg tilt reveal delay1" href="#fantitos">
+      <div class="work-content">
+        <div class="tag">02 · Consumer product · Ongoing project</div>
+        <h3>Fantitos</h3>
+        <p>I have been working on customer discovery, product hypotheses and commercial questions for an AI-powered social game — including 20 interviews, pain-point synthesis, personalisation ideas, market sizing, monetisation and ongoing product experimentation.</p>
+        <div class="pills"><span class="pill">20 interviews</span><span class="pill">Customer discovery</span><span class="pill">AI & personalisation</span><span class="pill">Product strategy</span><span class="pill">Market sizing</span><span class="pill">Growth</span></div>
+      </div>
+      <div class="work-visual"><img src="https://images.unsplash.com/photo-1779896412186-441e30764c8c?auto=format&fit=crop&w=1400&q=85" alt="Friends using a smartphone together"></div>
+      <div class="index">02</div>
+    </a>
+
+    <a class="work-card greenbg tilt reveal delay2" href="#going">
+      <div class="work-content">
+        <div class="tag">03 · European Commission project · International markets</div>
+        <h3>Going International</h3>
+        <p>I worked on the structured assessment of Argentinean SMEs: researching market context, supporting SME screening, analysing strategic and organisational readiness, applying VRIO and SWOT, benchmarking competitors, assessing international positioning and contributing to development-roadmap thinking.</p>
+        <div class="pills"><span class="pill">Market research</span><span class="pill">SME analysis</span><span class="pill">VRIO</span><span class="pill">SWOT</span><span class="pill">Porter 5 Forces</span><span class="pill">PESTEL</span></div>
+      </div>
+      <div class="work-visual"><img src="https://images.unsplash.com/photo-1758519288726-10e09a4af697?auto=format&fit=crop&w=1400&q=85" alt="Business collaboration and international markets"></div>
+      <div class="index">03</div>
+    </a>
+  </div>
+  <div class="project-note reveal"><i></i> I treat these as real work: the emphasis is on contribution, decisions, learning and what changed in my thinking.</div>
+</div>
+</section>
+
+<section id="mediloop">
+<div class="container">
+  <div class="story-head reveal">
+    <div><div class="eyebrow">Project 01 · Mediloop</div><h2>From a healthcare problem to a business system.</h2></div>
+    <p>This project was developed as a business plan and investment proposal. I worked across the operating and commercial logic needed to make the idea coherent — problem, ecosystem, business model, finance, funding, risk and execution.</p>
+  </div>
+
+  <div class="project-hero-panel">
+    <div class="project-photo reveal">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1800&q=88" alt="Healthcare professional using digital technology">
+      <div class="project-photo-copy"><h3>The work</h3><p>Map the medication journey, understand the ecosystem and connect product decisions to commercial and operational reality.</p></div>
+    </div>
+    <div class="project-side reveal delay1">
+      <div><span class="label">Project status</span><div class="big-number">Investment proposal</div><p style="margin-top:15px">A business plan developed to structure the opportunity and pitch the project for investment.</p></div>
+      <div><span class="label">My contribution</span><p style="margin-top:10px">Operating model · strategy · finance · commercial logic · execution planning</p></div>
+      <div><span class="label">Core question</span><p style="margin-top:10px">How do you make medication adherence easier for patients while creating visibility for caregivers and a connected refill journey?</p></div>
+    </div>
+  </div>
+
+  <div class="learning">
+    <article class="learning-card reveal"><span class="label">What I did</span><h3>Connected the pieces.</h3><p>I mapped the patient, caregiver and pharmacy journey; translated the problem into the <b>Schedule → Fill → Dispense → Remind → Alert → Refill</b> flow; worked through the business model; developed market and financial logic; considered risks, partnerships and circularity; and helped shape the funding story.</p></article>
+    <article class="learning-card reveal delay1"><span class="label">What I learned</span><h3>Good products need system thinking.</h3><p>A strong product idea is not enough. Healthcare products have to work across users, caregivers, pharmacies, operations, economics, compliance and trust. I learned to test the business system around the product — not only the product itself.</p></article>
+  </div>
+
+  <div class="project-metrics">
+    <div class="metric reveal"><strong>€28B+</strong><span>TAM in supplied project model</span></div>
+    <div class="metric reveal delay1"><strong>€3.6B+</strong><span>SAM in supplied project model</span></div>
+    <div class="metric reveal delay2"><strong>37.8%</strong><span>Gross margin in unit economics</span></div>
+    <div class="metric reveal delay3"><strong>€600K</strong><span>Seed investment funding ask</span></div>
+  </div>
+
+  <div class="funding-banner">
+    <div class="funding-main reveal"><span class="small">Funding ask</span><strong>€600,000</strong><p>Planned allocation: manufacturing & initial inventory, team & operations, product/software, go-to-market partnerships, and working capital.</p></div>
+    <div class="use-funds reveal delay1"><h3>Use of funds</h3><div class="fund-row"><b>35%</b><div class="fund-bar"><i style="width:35%"></i></div><span>Manufacturing</span></div><div class="fund-row"><b>30%</b><div class="fund-bar"><i style="width:30%"></i></div><span>Team & operations</span></div><div class="fund-row"><b>15%</b><div class="fund-bar"><i style="width:15%"></i></div><span>Product & software</span></div><div class="fund-row"><b>10%</b><div class="fund-bar"><i style="width:10%"></i></div><span>Go-to-market</span></div><div class="fund-row"><b>10%</b><div class="fund-bar"><i style="width:10%"></i></div><span>Working capital</span></div></div>
+  </div>
+
+  <div style="margin-top:50px">
+    <div class="section-head reveal" style="margin-bottom:25px"><div><div class="eyebrow">Project team</div><h2 style="font-size:clamp(36px,4vw,55px)">The people behind the proposal.</h2></div><p>The project deck identifies the team that developed the investment proposal.</p></div>
+    <div class="founders">
+      <div class="founder reveal"><div class="founder-photo">FV</div><div class="founder-info"><strong>Fede Villegas</strong><span>Project team</span></div></div>
+      <div class="founder reveal delay1"><div class="founder-photo">AA</div><div class="founder-info"><strong>Abdul Ahad Sultan Ansari</strong><span>Project team</span></div></div>
+      <div class="founder reveal delay2"><div class="founder-photo">JC</div><div class="founder-info"><strong>Jorge Chacon</strong><span>Project team</span></div></div>
+      <div class="founder reveal delay3"><div class="founder-photo">AV</div><div class="founder-info"><strong>Antonia van der Wense</strong><span>Project team</span></div></div>
+      <div class="founder reveal delay4"><div class="founder-photo">FMH</div><div class="founder-info"><strong>Fantar M'hamed Hassine</strong><span>Project team</span></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="fantitos">
+<div class="container">
+  <div class="story-head reveal"><div><div class="eyebrow">Project 02 · Fantitos</div><h2>Researching what makes social play feel worth repeating.</h2></div><p>This is an ongoing product project. I am using research, interviews and experimentation to understand the user problem before deciding what the product should become.</p></div>
+  <div class="learning">
+    <article class="learning-card reveal"><span class="label">What I did</span><h3>Started with users, not features.</h3><p>I conducted <b>20 semi-structured interviews</b> with university students and young professionals in Spain and India; grouped recurring problems; translated those findings into product hypotheses; explored AI-powered personalisation and game modes; and worked through market size, MAU scenarios and monetisation options.</p></article>
+    <article class="learning-card reveal delay1"><span class="label">What I learned</span><h3>Personalisation only matters if it solves a real frustration.</h3><p>The research reinforced the importance of listening for repeated pain points — repetitive gameplay, awkward content, limited variety and setup friction — rather than assuming that adding AI automatically creates value.</p></article>
+  </div>
+  <div class="project-photo reveal" style="height:430px;margin-top:20px"><img src="https://images.unsplash.com/photo-1779896412186-441e30764c8c?auto=format&fit=crop&w=1800&q=88" alt="Friends sharing a social experience"><div class="project-photo-copy"><h3>Still being tested.</h3><p>Product, positioning, monetisation and growth assumptions continue to evolve as the work progresses.</p></div></div>
+</div>
+</section>
+
+<section id="going">
+<div class="container">
+  <div class="story-head reveal"><div><div class="eyebrow">Project 03 · Going International</div><h2>Turning SME information into internationalisation decisions.</h2></div><p>A European Commission project focused on supporting Argentinean SMEs. My contribution centred on structured research, diagnosis, benchmarking and strategic analysis.</p></div>
+  <div class="learning">
+    <article class="learning-card reveal"><span class="label">What I did</span><h3>Analysed readiness and competitive position.</h3><p>I worked with the project methodology to assess SME information, support screening and selection, examine business models and organisational readiness, apply <b>VRIO</b> and <b>SWOT</b>, review financial and operational capability, analyse market attractiveness and benchmark competitors using tools including <b>Porter 5 Forces</b> and <b>PESTEL</b>.</p></article>
+    <article class="learning-card reveal delay1"><span class="label">What I learned</span><h3>International growth is a capability problem, not only a market problem.</h3><p>The project showed me that entering a new market depends on internal readiness too: governance, resources, value proposition, differentiation, operations, management alignment and the ability to execute the roadmap.</p></article>
+  </div>
+  <div class="current-grid" style="margin-top:20px">
+    <div class="current-main reveal"><img src="https://images.unsplash.com/photo-1758519288726-10e09a4af697?auto=format&fit=crop&w=1800&q=88" alt="International business collaboration"><div class="current-overlay"><span class="label" style="color:#ddd">Project perspective</span><h3>Research → diagnosis → positioning → roadmap.</h3><p>The work connected market context with company-level capability, so recommendations could be grounded in both the external opportunity and the SME's ability to deliver.</p></div></div>
+    <div class="current-list"><div class="current-item reveal delay1"><span class="label">Market research</span><h3>Argentina</h3><p>Market context across Buenos Aires, Córdoba, Mendoza and Rosario.</p></div><div class="current-item reveal delay2"><span class="label">Strategic diagnosis</span><h3>VRIO · SWOT · PESTEL</h3><p>Structured tools for capabilities, risks, external forces and strategic alignment.</p></div><div class="current-item reveal delay3"><span class="label">International positioning</span><h3>Benchmarking · Porter</h3><p>Competitors, attractiveness, entry feasibility and differentiation.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="research">
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Current independent research</div><h2>What I am researching now.</h2></div><p>I use independent research to understand structural changes before they become obvious business questions.</p></div>
+  <div class="current-grid">
+    <div class="current-main reveal"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=88" alt="Solar panels and renewable energy"><div class="research-float"><span>Currently researching</span><b>Energy · AI · Markets · Sustainability</b></div><div class="current-overlay"><span class="label" style="color:#ddd">01 · Energy & European competitiveness</span><h3>Can energy become one of Europe's strongest strategic advantages?</h3><p>I am researching solar potential, grid infrastructure, storage, energy dependency, cross-border electricity and how abundant renewable energy could influence industrial competitiveness.</p></div></div>
+    <div class="current-list">
+      <div class="current-item reveal delay1"><span class="label">02 · AI & business models</span><h3>Where AI changes the economics.</h3><p>How AI changes customer behaviour, products, operations, sales, productivity and competitive advantage — beyond the technology itself.</p></div>
+      <div class="current-item reveal delay2"><span class="label">03 · International markets</span><h3>How companies cross borders.</h3><p>Market attractiveness, entry barriers, positioning, capabilities, cost structures and the organisational changes needed for international growth.</p></div>
+      <div class="current-item reveal delay3"><span class="label">04 · Sustainable business</span><h3>When sustainability becomes strategy.</h3><p>Circular models, resource efficiency, energy transition and product design as sources of resilience and long-term value.</p></div>
+      <div class="current-item reveal delay4"><span class="label">05 · Emerging opportunities</span><h3>Finding the signal.</h3><p>Comparing industries, technologies, customer problems and structural trends to identify areas worth deeper investigation.</p></div>
+    </div>
+  </div>
+  <div class="research-image-strip reveal">
+    <div class="ribbon-photo" style="height:260px"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=85" alt="Solar panels and renewable energy"><span class="ribbon-label">Energy transition</span></div>
+    <div class="ribbon-photo" style="height:260px"><img src="https://images.unsplash.com/photo-1758519288726-10e09a4af697?auto=format&fit=crop&w=1400&q=85" alt="Global business strategy"><span class="ribbon-label">Global markets</span></div>
+    <div class="ribbon-photo" style="height:260px"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=85" alt="Digital healthcare technology"><span class="ribbon-label">Technology & health</span></div>
+  </div>
+  <div class="full-width-note reveal">My research is intentionally practical: I am not trying to predict the future perfectly. I am trying to understand what is changing, why it matters, who could benefit, and what business decisions might follow.</div>
+</div>
+</section>
+
+<section id="capabilities">
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Capabilities</div><h2>A business toolkit built around questions, not one job title.</h2></div><p>Strategy, market research, finance, growth, people and operations are connected in the way I approach business problems.</p></div>
+  <div class="skill-grid">
+    <div class="skill reveal"><h3>Business Strategy</h3><p>Strategic analysis, competitive positioning, business models, value propositions, roadmaps and decision frameworks.</p><div class="skillline"><i style="--w:92%"></i></div></div>
+    <div class="skill reveal delay1"><h3>Market Intelligence</h3><p>Market sizing, industry research, customer discovery, competitor benchmarking and opportunity assessment.</p><div class="skillline"><i style="--w:94%"></i></div></div>
+    <div class="skill reveal delay2"><h3>Finance & Commercial Analysis</h3><p>Financial logic, projections, unit economics, pricing thinking and commercial viability.</p><div class="skillline"><i style="--w:88%"></i></div></div>
+    <div class="skill reveal delay3"><h3>Growth & Business Development</h3><p>Go-to-market thinking, sales, partnerships, value propositions and routes to commercial growth.</p><div class="skillline"><i style="--w:90%"></i></div></div>
+    <div class="skill reveal delay4"><h3>People, HR & Talent</h3><p>Exposure across HR, recruitment, talent acquisition and the people side of organisational growth.</p><div class="skillline"><i style="--w:76%"></i></div></div>
+    <div class="skill reveal"><h3>Innovation & Transformation</h3><p>Problem discovery, product concepts, experimentation, AI-enabled opportunities, sustainability and new business models.</p><div class="skillline"><i style="--w:91%"></i></div></div>
+    <div class="skill reveal delay1"><h3>Operations & Retail</h3><p>Store management, family-business operations, sales, textile retail and day-to-day commercial execution.</p><div class="skillline"><i style="--w:84%"></i></div></div>
+    <div class="skill reveal delay2"><h3>Strategic Communication</h3><p>Turning analysis into business reports, presentations, recommendations, proposals and investor-facing narratives.</p><div class="skillline"><i style="--w:93%"></i></div></div>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="about-grid">
+    <div class="reveal"><div class="eyebrow">About</div><h2 class="about-title">A finance foundation with international management and practical business work.</h2></div>
+    <div class="reveal delay1">
+      <p class="about-copy">My background combines commerce and finance, international management, real business projects and hands-on work across sales, retail and operations. I also explore people-facing business areas including HR, recruitment and talent.</p>
+      <div class="timeline">
+        <div class="trow"><time>2025–2026</time><div><strong>EADA Business School · Barcelona</strong><span>Master in International Management — strategy, finance & accounting, international business, marketing, operations & supply chain, sustainable business, project management and innovation/digital business.</span></div></div>
+        <div class="trow"><time>2022–2025</time><div><strong>Bachelor of Commerce · Finance</strong><span>IPS Academy College of Commerce, Indore (DAVV) — finance and commerce foundation.</span></div></div>
+        <div class="trow"><time>Since 2018</time><div><strong>Family Business · Store Management</strong><span>Retail operations, customers, sales, inventory, commercial decisions and day-to-day management.</span></div></div>
+        <div class="trow"><time>2024</time><div><strong>Sales Internship</strong><span>Sales activity, customer interaction and business development.</span></div></div>
+        <div class="trow"><time>2022–2023</time><div><strong>Textile Management Internship</strong><span>Textile business operations and management.</span></div></div>
+        <div class="trow"><time>2024</time><div><strong>Netcom Society · Volunteer</strong><span>Skill-development and community outreach activities.</span></div></div>
+        <div class="trow"><time>Certifications</time><div><strong>NISM · Digital Marketing · Tally ERP</strong><span>Additional finance, marketing and business-operations learning.</span></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Working principles</div><h2>Useful thinking beats impressive wording.</h2></div><p>I care about the quality of the question, the evidence behind the answer and whether the recommendation can actually be used.</p></div>
+  <div class="case-grid">
+    <article class="case reveal"><span class="small">01 · Analytical</span><h3>Structure the problem.</h3><p>Break complexity into parts that can be researched, compared, challenged and acted upon.</p></article>
+    <article class="case reveal delay1"><span class="small">02 · Commercial</span><h3>Keep business reality visible.</h3><p>Revenue, cost, customer value, sales, operations and execution matter alongside strategy.</p></article>
+    <article class="case reveal delay2"><span class="small">03 · Curious</span><h3>Keep researching.</h3><p>When an answer is unclear, I prefer to investigate the market, ask better questions and update the view.</p></article>
+    <article class="case reveal delay3"><span class="small">04 · International</span><h3>Think across markets.</h3><p>My education and projects have been shaped by European business, international markets and cross-cultural collaboration.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="contact-wrap">
+<div class="container">
+  <div class="contact reveal">
+    <div class="eyebrow" style="color:#aaa">Abdul Ahad Sultan Ansari</div>
+    <h2>Let's work on a business problem, opportunity or idea.</h2>
+    <p>If you are hiring, researching a market, developing a strategy, exploring growth or looking for someone who can connect research with practical business thinking, I'd be happy to connect.</p>
+    <div class="contact-actions"><a class="btn magnetic" href="mailto:abdulahad79594@gmail.com?subject=Business%20%2F%20career%20conversation">Email Abdul ↗</a><a class="btn outline magnetic" href="https://www.linkedin.com/in/abdulahad-ansari" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+    <div class="contact-info"><a href="mailto:abdulahad79594@gmail.com">abdulahad79594@gmail.com</a><a href="https://www.linkedin.com/in/abdulahad-ansari" target="_blank" rel="noopener">linkedin.com/in/abdulahad-ansari</a></div>
+  </div>
+</div>
+</section>
+</main>
+<footer><div class="container footer"><span>© <span id="year"></span> Abdul Ahad Sultan Ansari · Strategy · Research · Projects</span><div class="footer-links"><a href="#top">Top ↑</a><a href="#work">Projects</a><a href="#contact">Contact</a></div></div></footer>
+
+
+
+<script>
+(function(){
+  const menu=document.getElementById('menu');
+  const nav=document.getElementById('navlinks');
+  if(menu && nav){
+    menu.addEventListener('click',()=>nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  }
+
+  document.querySelectorAll('.counter').forEach(el=>{
+    const target=Number(el.getAttribute('data-target')||0);
+    el.textContent=target+'+';
+  });
+
+  const year=document.getElementById('year');
+  if(year) year.textContent=new Date().getFullYear();
+
+  const cursor=document.getElementById('cursor');
+  if(cursor && window.matchMedia('(pointer:fine)').matches){
+    window.addEventListener('pointermove',e=>{
+      cursor.style.left=e.clientX+'px';
+      cursor.style.top=e.clientY+'px';
+    },{passive:true});
+  }
+
+  document.querySelectorAll('.tilt').forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      if(window.innerWidth<980)return;
+      const r=card.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5;
+      const y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform='perspective(1400px) rotateX('+(y*-1.0)+'deg) rotateY('+(x*1.0)+'deg) translateY(-5px)';
+    });
+    card.addEventListener('pointerleave',()=>card.style.transform='');
+  });
+
+  document.querySelectorAll('.magnetic').forEach(btn=>{
+    btn.addEventListener('pointermove',e=>{
+      if(window.innerWidth<980)return;
+      const r=btn.getBoundingClientRect();
+      const x=(e.clientX-r.left-r.width/2)*.06;
+      const y=(e.clientY-r.top-r.height/2)*.06;
+      btn.style.transform='translate('+x+'px,'+y+'px)';
+    });
+    btn.addEventListener('pointerleave',()=>btn.style.transform='');
+  });
+
+  if('IntersectionObserver' in window){
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('seen');
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:.08});
+    document.querySelectorAll('.skillline i').forEach(e=>obs.observe(e));
+  }
+})();
+</script>
+
+</body>
+</html>
