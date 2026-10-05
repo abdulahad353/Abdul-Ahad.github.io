@@ -349,13 +349,14 @@ body{background:#f5f5f7}
 @media(max-width:900px){.photo-ribbon{grid-template-columns:1fr 1fr}.ribbon-photo,.ribbon-photo:nth-child(2),.ribbon-photo:nth-child(3),.ribbon-photo:nth-child(4){height:210px;margin-top:0}.hero-image{width:120px;height:82px;right:18px;top:18px}}
 @media(max-width:640px){.photo-ribbon{grid-template-columns:1fr}.ribbon-photo,.ribbon-photo:nth-child(2),.ribbon-photo:nth-child(3),.ribbon-photo:nth-child(4){height:220px}.hero-image{width:105px;height:72px}}
 /* =========================================================
-   WORKING LENS — CLEAN LAYOUT FIX
+   WORKING LENS — FINAL CLEAN LAYOUT
    ========================================================= */
 
 .hero-stage {
     position: relative;
-    min-height: 720px;
+    min-height: 900px;
     overflow: hidden;
+    border-radius: var(--radius);
 }
 
 .hero-stage .hero-image {
@@ -368,7 +369,7 @@ body{background:#f5f5f7}
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .72;
+    opacity: .58;
 }
 
 .hero-stage::after {
@@ -376,38 +377,42 @@ body{background:#f5f5f7}
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,.88),
-        rgba(255,255,255,.70)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.94) 0%,
+            rgba(255,255,255,.84) 55%,
+            rgba(255,255,255,.72) 100%
+        );
     pointer-events: none;
 }
+
+/* Main content */
 
 .stage-grid {
     position: relative;
     z-index: 5;
-    padding: 64px 58px 55px;
+    padding: 62px 58px 60px;
 }
 
 .stage-label {
     display: block;
-    margin-bottom: 34px;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .18em;
-    color: #777b85;
+    margin-bottom: 38px;
+    font-size: 14px;
+    font-weight: 750;
+    letter-spacing: .20em;
+    color: #747983;
 }
 
 .stage-title {
     position: relative;
     z-index: 10;
-    font-size: clamp(58px, 6vw, 88px);
+    max-width: 780px;
+    font-size: clamp(52px, 5.2vw, 76px);
     line-height: .98;
-    letter-spacing: -.065em;
+    letter-spacing: -.055em;
     font-weight: 500;
     color: #101014;
-    max-width: 850px;
 }
 
 .stage-title .gradient {
@@ -423,11 +428,13 @@ body{background:#f5f5f7}
 }
 
 .stage-line {
-    height: 1px;
     width: 100%;
-    margin: 30px 0 34px;
+    height: 1px;
+    margin: 38px 0 34px;
     background: rgba(20,20,25,.14);
 }
+
+/* Four working steps */
 
 .stage-flow {
     position: relative;
@@ -438,84 +445,94 @@ body{background:#f5f5f7}
 }
 
 .flow-card {
-    min-height: 118px;
-    padding: 25px 30px;
-    border: 1px solid rgba(255,255,255,.85);
-    border-radius: 26px;
-    background: rgba(255,255,255,.72);
+    min-height: 130px;
+    padding: 25px 28px;
+    border: 1px solid rgba(255,255,255,.92);
+    border-radius: 24px;
+    background: rgba(255,255,255,.78);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow:
-        0 15px 40px rgba(30,40,60,.08),
-        inset 0 1px 0 rgba(255,255,255,.95);
+        0 16px 42px rgba(30,40,60,.08),
+        inset 0 1px 0 rgba(255,255,255,.98);
 }
 
 .flow-card b {
     display: block;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.2;
     color: #111217;
 }
 
 .flow-card span {
     display: block;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.45;
     color: #737780;
-    letter-spacing: .01em;
 }
+
+/* Closing statement */
 
 .hero-fact {
     position: relative;
     z-index: 10;
-    margin-top: 30px;
-    max-width: 850px;
+    max-width: 760px;
+    margin-top: 34px;
+    padding-top: 4px;
 }
 
 .hero-fact strong {
     display: block;
     margin-bottom: 8px;
-    font-size: 21px;
+    font-size: 20px;
     color: #111217;
 }
 
 .hero-fact p {
     margin: 0;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.55;
     color: #656a73;
 }
 
+/* Floating labels — deliberately kept away from cards */
+
 .float-chip {
     position: absolute;
-    z-index: 8;
-    padding: 15px 24px;
-    border: 1px solid rgba(255,255,255,.9);
+    z-index: 20;
+    padding: 14px 22px;
+    border: 1px solid rgba(255,255,255,.95);
     border-radius: 999px;
-    background: rgba(255,255,255,.78);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 14px 35px rgba(30,40,60,.10);
+    background: rgba(255,255,255,.84);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 14px 34px rgba(30,40,60,.10);
     font-size: 14px;
     font-weight: 650;
     color: #555a63;
     pointer-events: none;
+    white-space: nowrap;
 }
+
+/* Top-right only — no interference with cards */
 
 .fc1 {
     top: 30px;
-    right: 28px;
+    right: 30px;
 }
 
 .fc2 {
-    left: 25px;
-    bottom: 150px;
+    top: 92px;
+    right: 30px;
 }
 
 .fc3 {
-    right: 28px;
-    bottom: 30px;
+    top: 154px;
+    right: 30px;
 }
+
+/* Tablet */
 
 @media (max-width: 900px) {
 
@@ -524,43 +541,93 @@ body{background:#f5f5f7}
     }
 
     .stage-grid {
-        padding: 45px 28px 40px;
+        padding: 48px 30px 48px;
     }
 
     .stage-title {
-        font-size: clamp(48px, 10vw, 70px);
+        max-width: 650px;
+        font-size: clamp(46px, 8vw, 66px);
+    }
+
+    .stage-flow {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .float-chip {
+        font-size: 12px;
+        padding: 11px 16px;
+    }
+
+    .fc1 {
+        top: 24px;
+        right: 20px;
+    }
+
+    .fc2 {
+        top: 76px;
+        right: 20px;
+    }
+
+    .fc3 {
+        top: 128px;
+        right: 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+    .hero-stage {
+        min-height: auto;
+    }
+
+    .stage-grid {
+        padding: 42px 22px 42px;
+    }
+
+    .stage-label {
+        margin-bottom: 28px;
+        font-size: 12px;
+        letter-spacing: .16em;
+    }
+
+    .stage-title {
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 1;
+    }
+
+    .stage-line {
+        margin: 30px 0 26px;
     }
 
     .stage-flow {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
 
     .flow-card {
         min-height: auto;
+        padding: 22px;
     }
 
-    .fc1 {
-        top: 18px;
-        right: 18px;
-        transform: scale(.85);
-        transform-origin: top right;
+    .flow-card b {
+        font-size: 19px;
     }
 
-    .fc2 {
-        left: 15px;
-        bottom: 115px;
-        transform: scale(.8);
-        transform-origin: bottom left;
+    .hero-fact {
+        margin-top: 28px;
     }
 
-    .fc3 {
-        right: 15px;
-        bottom: 18px;
-        transform: scale(.8);
-        transform-origin: bottom right;
+    .hero-fact p {
+        font-size: 15px;
+    }
+
+    /* Hide floating chips on small screens so nothing can overlap */
+    .float-chip {
+        display: none;
     }
 }
-
 </style>
 </head>
 
