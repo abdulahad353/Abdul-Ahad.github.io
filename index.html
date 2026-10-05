@@ -11,10 +11,9 @@
     <meta name="theme-color" content="#f5f5f7">
 
     <!-- Website Logo / Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <title>Abdul Ahad Sultan Ansari – Strategy · Research · Projects</title>
-</head>
 
 <style>
 :root{
@@ -349,7 +348,218 @@ body{background:#f5f5f7}
 .hero-image{position:absolute;right:24px;top:24px;width:150px;height:100px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.65);box-shadow:0 18px 55px rgba(0,0,0,.12);transform:rotate(3deg);z-index:3}.hero-image img{width:100%;height:100%;object-fit:cover}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(10,20,40,.22))}
 @media(max-width:900px){.photo-ribbon{grid-template-columns:1fr 1fr}.ribbon-photo,.ribbon-photo:nth-child(2),.ribbon-photo:nth-child(3),.ribbon-photo:nth-child(4){height:210px;margin-top:0}.hero-image{width:120px;height:82px;right:18px;top:18px}}
 @media(max-width:640px){.photo-ribbon{grid-template-columns:1fr}.ribbon-photo,.ribbon-photo:nth-child(2),.ribbon-photo:nth-child(3),.ribbon-photo:nth-child(4){height:220px}.hero-image{width:105px;height:72px}}
+/* =========================================================
+   WORKING LENS — CLEAN LAYOUT FIX
+   ========================================================= */
 
+.hero-stage {
+    position: relative;
+    min-height: 720px;
+    overflow: hidden;
+}
+
+.hero-stage .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-stage .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .72;
+}
+
+.hero-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.88),
+        rgba(255,255,255,.70)
+    );
+    pointer-events: none;
+}
+
+.stage-grid {
+    position: relative;
+    z-index: 5;
+    padding: 64px 58px 55px;
+}
+
+.stage-label {
+    display: block;
+    margin-bottom: 34px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .18em;
+    color: #777b85;
+}
+
+.stage-title {
+    position: relative;
+    z-index: 10;
+    font-size: clamp(58px, 6vw, 88px);
+    line-height: .98;
+    letter-spacing: -.065em;
+    font-weight: 500;
+    color: #101014;
+    max-width: 850px;
+}
+
+.stage-title .gradient {
+    background: linear-gradient(
+        90deg,
+        #30343a 0%,
+        #176ed8 55%,
+        #7357e8 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.stage-line {
+    height: 1px;
+    width: 100%;
+    margin: 30px 0 34px;
+    background: rgba(20,20,25,.14);
+}
+
+.stage-flow {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.flow-card {
+    min-height: 118px;
+    padding: 25px 30px;
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 26px;
+    background: rgba(255,255,255,.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 15px 40px rgba(30,40,60,.08),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.flow-card b {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #111217;
+}
+
+.flow-card span {
+    display: block;
+    font-size: 16px;
+    color: #737780;
+    letter-spacing: .01em;
+}
+
+.hero-fact {
+    position: relative;
+    z-index: 10;
+    margin-top: 30px;
+    max-width: 850px;
+}
+
+.hero-fact strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 21px;
+    color: #111217;
+}
+
+.hero-fact p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.55;
+    color: #656a73;
+}
+
+.float-chip {
+    position: absolute;
+    z-index: 8;
+    padding: 15px 24px;
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 999px;
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 14px 35px rgba(30,40,60,.10);
+    font-size: 14px;
+    font-weight: 650;
+    color: #555a63;
+    pointer-events: none;
+}
+
+.fc1 {
+    top: 30px;
+    right: 28px;
+}
+
+.fc2 {
+    left: 25px;
+    bottom: 150px;
+}
+
+.fc3 {
+    right: 28px;
+    bottom: 30px;
+}
+
+@media (max-width: 900px) {
+
+    .hero-stage {
+        min-height: auto;
+    }
+
+    .stage-grid {
+        padding: 45px 28px 40px;
+    }
+
+    .stage-title {
+        font-size: clamp(48px, 10vw, 70px);
+    }
+
+    .stage-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-card {
+        min-height: auto;
+    }
+
+    .fc1 {
+        top: 18px;
+        right: 18px;
+        transform: scale(.85);
+        transform-origin: top right;
+    }
+
+    .fc2 {
+        left: 15px;
+        bottom: 115px;
+        transform: scale(.8);
+        transform-origin: bottom left;
+    }
+
+    .fc3 {
+        right: 15px;
+        bottom: 18px;
+        transform: scale(.8);
+        transform-origin: bottom right;
+    }
+}
 
 </style>
 </head>
@@ -385,24 +595,63 @@ body{background:#f5f5f7}
 
   <div class="hero-visual reveal delay2">
     <div class="hero-stage" id="heroStage">
-      <div class="hero-image"><img src="https://images.unsplash.com/photo-1771153492862-f4737fba886c?auto=format&fit=crop&w=1000&q=85" alt="Barcelona cityscape"></div>
-      <div class="stage-grid">
-        <span class="stage-label">My working lens</span>
-        <div class="stage-title">Research first.<br><span class="gradient">Strategy second.</span></div>
-        <div class="stage-line"></div>
-        <div class="stage-flow">
-          <div class="flow-card"><b>01 · Research</b><span>Market · customer · industry</span></div>
-          <div class="flow-card"><b>02 · Diagnose</b><span>Problem · model · capability</span></div>
-          <div class="flow-card"><b>03 · Design</b><span>Options · positioning · roadmap</span></div>
-          <div class="flow-card"><b>04 · Communicate</b><span>Insight · recommendation · action</span></div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1771153492862-f4737fba886c?auto=format&fit=crop&w=1000&q=85"
+                alt="Barcelona skyline">
         </div>
-        <div class="hero-fact"><strong>What I value</strong><p>Clear thinking, commercial reality, useful research and decisions that can actually be acted on.</p></div>
-      </div>
-      <div class="float-chip fc1">Market intelligence</div>
-      <div class="float-chip fc2">Finance · Growth</div>
-      <div class="float-chip fc3">People · Operations</div>
+
+        <div class="stage-grid">
+
+            <span class="stage-label">MY WORKING LENS</span>
+
+            <div class="stage-title">
+                Research first.<br>
+                <span class="gradient">Strategy second.</span>
+            </div>
+
+            <div class="stage-line"></div>
+
+            <div class="stage-flow">
+
+                <div class="flow-card">
+                    <b>01 · Research</b>
+                    <span>Market · customer · industry</span>
+                </div>
+
+                <div class="flow-card">
+                    <b>02 · Diagnose</b>
+                    <span>Problem · model · capability</span>
+                </div>
+
+                <div class="flow-card">
+                    <b>03 · Design</b>
+                    <span>Options · positioning · roadmap</span>
+                </div>
+
+                <div class="flow-card">
+                    <b>04 · Communicate</b>
+                    <span>Insight · recommendation · action</span>
+                </div>
+
+            </div>
+
+            <div class="hero-fact">
+                <strong>What I value</strong>
+                <p>
+                    Clear thinking, commercial reality, useful research
+                    and decisions that can actually be acted on.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="float-chip fc1">Market intelligence</div>
+        <div class="float-chip fc2">Finance · Growth</div>
+        <div class="float-chip fc3">People · Operations</div>
+
     </div>
-  </div>
 </div>
 <div class="scroll"><i></i> scroll to explore <i></i></div>
 </section>
