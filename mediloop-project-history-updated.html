@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mediloop project by Abdul Ahad Sultan Ansari, highlighting market research, competitor analysis, business modelling, financial analysis and risk assessment.">
+  <meta name="theme-color" content="#f5f5f7">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Mediloop | Abdul Ahad Sultan Ansari</title>
+  <style>
+    :root{--bg:#f5f5f7;--ink:#111114;--muted:#62646d;--line:rgba(17,17,20,.15);--blue:#0877e8;--purple:#7358e8;--max:1000px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .nav-shell{position:sticky;top:0;z-index:10;padding:11px 16px;background:rgba(245,245,247,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
+    nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-size:14px;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .links{display:flex;align-items:center;gap:4px}
+    .links a{padding:8px 10px;border-radius:99px;color:#555;font-size:12px}
+    .links a:hover,.links a.active{background:#fff;color:#111}
+    .menu{display:none;width:40px;height:40px;border:0;border-radius:50%;background:#fff;font-size:20px}
+    .hero{padding:66px 0 35px}
+    .eyebrow{display:flex;align-items:center;gap:9px;color:#74757d;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0}
+    h1,h2,h3,p{margin-top:0}
+    h1{max-width:900px;margin:20px 0 20px;font-size:clamp(2.8rem,6.5vw,5.4rem);line-height:.99;letter-spacing:-.068em}
+    h2{font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.2;letter-spacing:-.045em;margin-bottom:10px}
+    .gradient{color:transparent;background:linear-gradient(100deg,#24242b,var(--blue),var(--purple));background-clip:text;-webkit-background-clip:text}
+    .lead{max-width:780px;font-size:clamp(1rem,1.6vw,1.15rem);color:#5e6069;margin-bottom:22px}
+    .actions{display:flex;flex-wrap:wrap;gap:9px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border:1px solid var(--line);border-radius:99px;background:#fff;color:#111;font-size:12px;font-weight:750}
+    .btn.dark{background:#111;color:#fff;border-color:#111}
+    .content{padding-bottom:40px}
+    .facts{display:flex;flex-wrap:wrap;gap:8px 26px;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
+    .fact{min-width:125px}
+    .fact strong{display:block;font-size:clamp(1.2rem,2.5vw,1.7rem);letter-spacing:-.05em;line-height:1.2}
+    .fact span{display:block;font-size:10px;color:#81838b;margin-top:4px}
+    .section{padding:0 0 26px;margin-bottom:25px;border-bottom:1px solid var(--line)}
+    .section:last-of-type{border-bottom:0}
+    .section .eyebrow{margin-bottom:10px}
+    .section p{max-width:900px;color:var(--muted);font-size:14px;margin-bottom:11px}
+    .section p:last-child{margin-bottom:0}
+    .section ul{padding-left:20px;margin:10px 0 0;color:var(--muted)}
+    .section li{padding:3px 0 3px 2px;font-size:14px}
+    .section li::marker{color:var(--blue)}
+    .closing{padding:23px 0 28px;border-top:1px solid var(--line);margin-top:2px}
+    .closing h2{max-width:700px;font-size:clamp(1.7rem,3.4vw,2.6rem)}
+    .closing p{max-width:800px;color:var(--muted);font-size:14px}
+    .context{font-size:10px!important;color:#85868e!important;margin-top:15px!important}
+    footer{padding:23px 0 32px;border-top:1px solid var(--line);color:#888991;font-size:10px}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:14px;flex-wrap:wrap}
+    @media(max-width:700px){
+      .wrap{width:min(calc(100% - 28px),var(--max))}
+      nav{flex-wrap:wrap;align-items:flex-start}
+      .menu{display:block}
+      .links{display:none;flex-direction:column;align-items:stretch;width:100%;padding:7px;border:1px solid var(--line);border-radius:16px;background:#fff}
+      .links.open{display:flex}.links a{padding:11px;font-size:13px}
+      .hero{padding-top:43px}.facts{gap:16px 22px}
+      .fact{min-width:calc(50% - 22px)}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<header class="nav-shell">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="index.html">Abdul Ahad Sultan Ansari</a>
+    <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" onclick="const l=document.querySelector('.links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))">☰</button>
+    <div class="links">
+      <a href="index.html">Home</a><a class="active" href="projects.html">Projects</a><a href="research.html">Research</a><a href="capabilities.html">Capabilities</a><a href="cv.html">Online CV</a><a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Project 01 · Healthcare · Strategy + Finance</div>
+    <h1>From a healthcare problem to a <span class="gradient">business system.</span></h1>
+    <p class="lead">Mediloop was a team project exploring a connected way to help people manage medication. My contribution focused on understanding the market, comparing competing solutions and building the business case: how the product could work as a service, who it could serve, how it might earn revenue and what risks would need to be addressed.</p>
+    <div class="actions">
+      <a class="btn dark" href="projects.html">← All projects</a>
+      <a class="btn" href="contact.html">Discuss my work ↗</a>
+    </div>
+  </section>
+
+  <div class="content">
+    <div class="facts" aria-label="Project model figures">
+      <div class="fact"><strong>€28B+</strong><span>Estimated TAM in project model</span></div>
+      <div class="fact"><strong>€3.6B+</strong><span>Estimated SAM in project model</span></div>
+      <div class="fact"><strong>37.8%</strong><span>Indicative gross margin assumption</span></div>
+      <div class="fact"><strong>€600K</strong><span>Proposed funding requirement</span></div>
+    </div>
+
+    <section class="section">
+      <div class="eyebrow">The problem and concept</div>
+      <h2>Medication management is a connected journey.</h2>
+      <p>Taking medication as prescribed can be difficult to manage consistently, especially when several doses, reminders or refills are involved. Caregivers may also be unsure whether a dose was taken. The project started from a simple observation: a dispenser on its own would not address the full journey.</p>
+      <p>The concept brought together a smart dispenser, an app for reminders and tracking, alerts for caregivers when a dose was missed, and a link to pharmacy refills or delivery. The proposed journey ran from scheduling and filling the tray to dispensing, reminders, alerts and refills.</p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">My contribution</div>
+      <h2>Research the market. Compare alternatives. Build the business case.</h2>
+      <p>I worked on the business plan and investment proposal, connecting the needs of patients, caregivers and pharmacies with the practical decisions behind the service. I mapped how scheduling, filling, dispensing, reminders, missed-dose alerts and refills could work together, and considered where the process would need to be reliable and easy to use.</p>
+      <p><strong>Competitor analysis:</strong> I compared the proposed Mediloop model with pill dispensers, medication reminder apps and traditional pharmacy services. I looked at which parts of the medication journey each alternative covered, including smart dispensing, caregiver visibility, reminders and refill support. This comparison helped identify Mediloop’s intended point of difference: bringing the steps together instead of solving only one part of the problem.</p>
+      <p><strong>Market and commercial analysis:</strong> I worked with the project’s market-sizing assumptions and assessed the proposed rental, purchase and subscription options. I reviewed the unit economics and five-year financial forecast to understand how pricing, product costs and operating expenses could affect the business model.</p>
+      <p><strong>Risk and investment planning:</strong> I considered risks including supply-chain disruption, regulatory and compliance delays, market adoption, competition and operational execution. I also worked with the funding proposal, which outlined how a potential €600,000 could be allocated across manufacturing, team and operations, product development, go-to-market activity and working capital.</p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Commercial model</div>
+      <h2>Explore purchase and rental options.</h2>
+      <p>The financial model compared three options: renting the device for €29 per month, buying it for €249, or buying it for €249 with an optional €19 monthly subscription. These were proposed prices for the business plan, not prices from a live commercial launch.</p>
+      <p>The model estimated a landed cost of €155 per device. Against a proposed €249 selling price, that would leave €94 gross profit per unit, or a 37.8% gross margin before other operating costs. The presentation estimated a €28B+ total addressable market and a €3.6B+ serviceable market. These figures were part of the project’s assumptions, rather than independently validated market results.</p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Skills demonstrated</div>
+      <h2>Turning research into practical business decisions.</h2>
+      <p>This project gave me practical experience in <strong>competitor benchmarking, market research, business model development, pricing analysis, unit economics, financial forecasting, risk assessment and investment planning.</strong> It also required me to connect the findings: a competitive advantage only matters if customers value it, the service can be delivered, and the economics have a credible path to working.</p>
+      <p>I learned to treat assumptions critically rather than present projections as results. The market estimates, pricing, margins and funding requirement were part of a proposal, not validated commercial outcomes. Testing them with users, pharmacies and other potential partners would be an important next step.</p>
+    </section>
+
+    <section class="closing">
+      <h2>Building the business case behind the idea.</h2>
+      <p>Working on Mediloop gave me a chance to bring customer needs, service design, financial assumptions and risks into one business plan. The project work concluded on 30 June 2026.</p>
+      <div class="actions">
+        <a class="btn dark" href="projects.html">Explore other projects →</a>
+        <a class="btn" href="contact.html">Contact me ↗</a>
+      </div>
+      <p class="context">Figures for market size, pricing and margin are estimates from the project model. The €600,000 was a proposed funding ask, not money raised.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 Abdul Ahad Sultan Ansari · Research, clarity and practical business thinking.</span>
+    <div class="footer-links"><a href="cv.html">Online CV</a><a href="contact.html">Contact</a><a href="https://www.linkedin.com/in/abdulahad-ansari" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+  </div>
+</footer>
+</body>
+</html>
