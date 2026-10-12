@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Fantitos project by Abdul Ahad Sultan Ansari, highlighting customer research, competitor analysis, market sizing, business modelling and financial analysis.">
+  <meta name="theme-color" content="#f5f5f7">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Fantitos | Abdul Ahad Sultan Ansari</title>
+  <style>
+    :root{--bg:#f5f5f7;--ink:#111114;--muted:#62646d;--line:rgba(17,17,20,.15);--blue:#0877e8;--purple:#7358e8;--max:1000px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .nav-shell{position:sticky;top:0;z-index:10;padding:11px 16px;background:rgba(245,245,247,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
+    nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:14px;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+    .links{display:flex;align-items:center;gap:4px}.links a{padding:8px 10px;border-radius:99px;color:#555;font-size:12px}.links a:hover,.links a.active{background:#fff;color:#111}
+    .menu{display:none;width:40px;height:40px;border:0;border-radius:50%;background:#fff;font-size:20px}
+    .hero{padding:66px 0 35px}.eyebrow{display:flex;align-items:center;gap:9px;color:#74757d;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0}
+    h1,h2,h3,p{margin-top:0}h1{max-width:900px;margin:20px 0;font-size:clamp(2.8rem,6.5vw,5.4rem);line-height:.99;letter-spacing:-.068em}
+    h2{font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.2;letter-spacing:-.045em;margin-bottom:10px}
+    .gradient{color:transparent;background:linear-gradient(100deg,#24242b,var(--blue),var(--purple));background-clip:text;-webkit-background-clip:text}
+    .lead{max-width:780px;font-size:clamp(1rem,1.6vw,1.15rem);color:#5e6069;margin-bottom:22px}
+    .actions{display:flex;flex-wrap:wrap;gap:9px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border:1px solid var(--line);border-radius:99px;background:#fff;color:#111;font-size:12px;font-weight:750}.btn.dark{background:#111;color:#fff;border-color:#111}
+    .content{padding-bottom:40px}.facts{display:flex;flex-wrap:wrap;gap:8px 26px;padding:19px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:34px}
+    .fact{min-width:125px}.fact strong{display:block;font-size:clamp(1.2rem,2.5vw,1.7rem);letter-spacing:-.05em;line-height:1.2}.fact span{display:block;font-size:10px;color:#81838b;margin-top:4px}
+    .section{padding:0 0 26px;margin-bottom:25px;border-bottom:1px solid var(--line)}.section:last-of-type{border-bottom:0}.section .eyebrow{margin-bottom:10px}
+    .section p{max-width:900px;color:var(--muted);font-size:14px;margin-bottom:11px}.section p:last-child{margin-bottom:0}
+    .section ul{padding-left:20px;margin:10px 0 0;color:var(--muted)}.section li{padding:3px 0 3px 2px;font-size:14px}.section li::marker{color:var(--blue)}
+    .closing{padding:23px 0 28px;border-top:1px solid var(--line);margin-top:2px}.closing h2{max-width:700px;font-size:clamp(1.7rem,3.4vw,2.6rem)}.closing p{max-width:800px;color:var(--muted);font-size:14px}
+    .context{font-size:10px!important;color:#85868e!important;margin-top:15px!important}
+    footer{padding:23px 0 32px;border-top:1px solid var(--line);color:#888991;font-size:10px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+    @media(max-width:700px){.wrap{width:min(calc(100% - 28px),var(--max))}nav{flex-wrap:wrap;align-items:flex-start}.menu{display:block}.links{display:none;flex-direction:column;align-items:stretch;width:100%;padding:7px;border:1px solid var(--line);border-radius:16px;background:#fff}.links.open{display:flex}.links a{padding:11px;font-size:13px}.hero{padding-top:43px}.facts{gap:16px 22px}.fact{min-width:calc(50% - 22px)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<header class="nav-shell"><nav aria-label="Main navigation">
+  <a class="brand" href="index.html">Abdul Ahad Sultan Ansari</a>
+  <button class="menu" type="button" aria-label="Open navigation" aria-expanded="false" onclick="const l=document.querySelector('.links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))">☰</button>
+  <div class="links"><a href="index.html">Home</a><a class="active" href="projects.html">Projects</a><a href="research.html">Research</a><a href="capabilities.html">Capabilities</a><a href="cv.html">Online CV</a><a href="contact.html">Contact</a></div>
+</nav></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Project 02 · Consumer product · Launched in Barcelona</div>
+    <h1>Researching what makes social play <span class="gradient">worth repeating.</span></h1>
+    <p class="lead">Fantitos Juegos is an AI-powered social and party game project launched in Barcelona. My contribution focused on customer research, competitor benchmarking, market sizing and commercial planning to understand the user problem, position the product and assess its business potential.</p>
+    <div class="actions"><a class="btn dark" href="projects.html">← All projects</a><a class="btn" href="contact.html">Discuss my work ↗</a></div>
+  </section>
+  <div class="content">
+    <div class="facts" aria-label="Project research and market estimates">
+      <div class="fact"><strong>20</strong><span>Customer interviews</span></div>
+      <div class="fact"><strong>4</strong><span>Key competitor products reviewed</span></div>
+      <div class="fact"><strong>€7.83B</strong><span>Estimated TAM in project model</span></div>
+      <div class="fact"><strong>€192.82M</strong><span>Estimated SOM in project model</span></div>
+    </div>
+    <section class="section">
+      <div class="eyebrow">The problem and concept</div>
+      <h2>Make each gathering feel different.</h2>
+      <p>The project began with a familiar issue: party games can become repetitive, questions may not suit the group, and the experience does not always feel personal. Fantitos explored an AI-powered mobile game that could adapt prompts and game modes to the players, their relationships and the occasion.</p>
+      <p>The concept covered different group sizes, relationships, game modes, party vibes, locations and occasions. These inputs would guide the generation of Truth, Dare, challenges, icebreakers and conversation starters. The concept was launched in Barcelona; the market, monetisation and growth assumptions described below still require validation.</p>
+    </section>
+    <section class="section">
+      <div class="eyebrow">My contribution</div>
+      <h2>Start with users, compare alternatives, test the business case.</h2>
+      <p><strong>Customer research:</strong> I conducted 20 semi-structured interviews with university students and young professionals in Spain and India. I organised the feedback and looked for repeated frustrations, including repetitive gameplay, limited personalisation, awkward content and the effort needed to get a game started. These themes helped shape product hypotheses around context-aware prompts and different game modes.</p>
+      <p><strong>Competitor analysis:</strong> I reviewed Jackbox Games, Psych!, We’re Not Really Strangers and Party in My Dorm. I compared their social interaction, personalisation and use of AI, then used competitor mapping to explore a potential position for Fantitos: a more personalised, context-aware game experience. This was a proposed positioning, not a proven competitive advantage.</p>
+      <p><strong>Market research:</strong> I worked with TAM, SAM and SOM estimates to describe the overall opportunity and a more focused target market. The project model estimated TAM at €7.83 billion, SAM at €964.12 million and SOM at €192.82 million. These were project estimates based on the assumptions used, not independently verified market figures.</p>
+      <p><strong>Commercial and strategic analysis:</strong> I explored monetisation options including a free app, in-app advertising, premium game packs and a Fantitos Plus subscription. The wider work included the customer journey, marketing and retention planning, financial scenarios, SWOT, PESTEL and risk analysis. Key risks included user adoption, competitors copying features, AI costs, privacy, content safety and retention.</p>
+    </section>
+    <section class="section">
+      <div class="eyebrow">Commercial model</div>
+      <h2>Explore how the product could attract and retain users.</h2>
+      <p>The customer journey mapped awareness, download, first game, retention, monetisation and referral. The business model considered freemium access, advertising, premium game packs priced at €2.99, and Fantitos Plus at €4.99 per month. These were proposed options in the project model rather than live prices or realised revenue.</p>
+      <p>The financial work considered user-growth scenarios, revenue, AI costs and operating expenses. The presentation included a three-year forecast and break-even scenarios, but these depended on assumptions about monthly active users, engagement, conversion and costs. They should be treated as planning scenarios, not evidence of actual users, revenue or traction.</p>
+    </section>
+    <section class="section">
+      <div class="eyebrow">Skills demonstrated</div>
+      <h2>Turning customer evidence into business recommendations.</h2>
+      <p>The work gave me practical experience in <strong>customer discovery, qualitative research, competitor benchmarking, market sizing, product positioning, business-model analysis, monetisation planning, financial forecasting, marketing and retention planning, SWOT, PESTEL and risk assessment.</strong> It also required me to connect the analysis: product differentiation needs to address a real user problem and make commercial sense.</p>
+      <p>My contribution focused on research, analysis and business planning within a team. I am not claiming sole ownership of the product or attributing commercial traction to the analyses described here.</p>
+    </section>
+    <section class="closing">
+      <h2>From an interesting concept to questions worth testing.</h2>
+      <p>Fantitos gave me experience connecting customer feedback and competitor research with product decisions, market estimates and commercial planning. With the project launched in Barcelona, further user testing and performance data would help validate the assumptions and guide the next stage.</p>
+      <div class="actions"><a class="btn dark" href="projects.html">Explore other projects →</a><a class="btn" href="contact.html">Contact me ↗</a></div>
+      <p class="context">Market sizes, pricing, user growth and financial forecasts are estimates from the project presentation. They are not independently verified results or achieved traction.</p>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap footer-inner"><span>© 2026 Abdul Ahad Sultan Ansari · Research, clarity and practical business thinking.</span><div class="footer-links"><a href="cv.html">Online CV</a><a href="contact.html">Contact</a><a href="https://www.linkedin.com/in/abdulahad-ansari" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></footer>
+</body>
+</html>
